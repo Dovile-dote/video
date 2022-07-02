@@ -7,7 +7,6 @@ function List() {
 
   return (
     <>
-      <h2>List of Movies</h2>
       <ul>
         {movies
           ? movies.map((movie) => <Line key={movie.id} line={movie}></Line>)

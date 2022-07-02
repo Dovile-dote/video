@@ -7,10 +7,14 @@ function List() {
 
   return (
     <>
-      <h2>List of Categories</h2>
-      <ul>
-        {cats ? cats.map((cat) => <Line key={cat.id} line={cat}></Line>) : null}
-      </ul>
+      <div className="cat-list">
+        <h2>List of Categories</h2>
+        <ul>
+          {cats
+            ? cats.map((cat) => <Line key={cat.id} line={cat}></Line>)
+            : null}
+        </ul>
+      </div>
     </>
   );
 }

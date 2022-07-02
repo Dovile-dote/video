@@ -12,7 +12,7 @@ function Nav() {
               ? {
                   color: 'crimson',
                 }
-              : { color: 'azure' }
+              : { color: 'rgb(243, 243, 123)' }
           }
         >
           <span className="nav-hover">BACK</span>
@@ -25,7 +25,7 @@ function Nav() {
               ? {
                   color: 'crimson',
                 }
-              : { color: 'azure' }
+              : { color: 'rgb(243, 243, 123)' }
           }
         >
           <span className="nav-hover">Categories</span>
@@ -38,7 +38,7 @@ function Nav() {
               ? {
                   color: 'crimson',
                 }
-              : { color: 'azure' }
+              : { color: 'rgb(243, 243, 123)' }
           }
         >
           <span className="nav-hover">Movies</span>

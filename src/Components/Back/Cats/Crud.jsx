@@ -7,13 +7,9 @@ function Crud() {
   return (
     <>
       <Nav />
-      <div>
-        <div>
-          <Create />
-        </div>
-        <div>
-          <List />
-        </div>
+      <div className="categories">
+        <Create />
+        <List />
       </div>
       <Edit />
     </>

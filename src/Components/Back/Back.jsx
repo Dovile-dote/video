@@ -111,18 +111,46 @@ function Back({ show }) {
         {show === 'admin' ? (
           <>
             <Nav />
-            <div>
-              <h1>BACK</h1>
-              <ul>
-                {movies
-                  ? movies.map((movie) => (
-                      <li key={movie.id}>
-                        <b>{movie.title}</b> {movie.category}{' '}
-                        <i>{movie.price}</i>
-                      </li>
-                    ))
-                  : null}
-              </ul>
+            {/* <div> */}
+            <div className="star-wars-container">
+              <div className="star-wars-text">
+                <h1>STAR WARS</h1>
+                <h2>Scrolling text</h2>
+                {/* <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                    voluptatem assumenda possimus porro, earum laborum ipsa
+                    alias veniam deleniti nisi quibusdam illum delectus
+                    asperiores corrupti voluptatibus sunt ducimus quos sint,
+                    voluptas qui rerum adipisci. Rerum, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                    voluptatem assumenda possimus porro, earum laborum ipsa
+                    alias veniam deleniti nisi quibusdam illum delectus
+                    asperiores corrupti voluptatibus sunt ducimus quos sint,
+                    voluptas qui rerum adipisci. Rerum, id?
+                  </p> */}
+                {/* <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                    voluptatem assumenda possimus porro, earum laborum ipsa
+                    alias veniam deleniti nisi quibusdam illum delectus
+                    asperiores corrupti voluptatibus sunt ducimus quos sint,
+                    voluptas qui rerum adipisci. Rerum, id?
+                  </p> */}
+
+                <ul className="movies-list">
+                  {movies
+                    ? movies.map((movie) => (
+                        <li key={movie.id}>
+                          <h3>{movie.title}</h3>
+                          category {movie.category}, price: <i>{movie.price}</i>{' '}
+                          Eu.
+                        </li>
+                      ))
+                    : null}
+                </ul>
+              </div>
+              {/* </div> */}
             </div>
           </>
         ) : show === 'cats' ? (
