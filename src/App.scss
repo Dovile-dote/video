@@ -242,29 +242,42 @@ body {
             }
         }
 
-        .create {
-            width: 30%;
-            border: 2px solid red;
-        }
+        .movies {
+            // background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        .list {
-            width: 60%;
-            margin-left: 10px;
-
-            ul {
-                padding-left: 0;
-                list-style: none;
-
-                li {
-                    min-width: 300px;
-                    display: flex;
-                    border-bottom: 2px solid $spalva;
-                    padding-top: 5px;
-                    justify-content: space-between;
-                }
+            .create {
+                width: 30%;
+                // border: 2px solid green;
+                flex-direction: column;
             }
 
+            .list {
+                width: 60%;
+                margin-left: 10px;
+
+
+                ul {
+                    padding-left: 0;
+                    list-style: none;
+
+                    li {
+                        min-width: 300px;
+                        display: flex;
+                        border-bottom: 2px solid $spalva;
+                        padding-top: 5px;
+                        justify-content: space-between;
+                    }
+                }
+
+            }
         }
+
+
+
+
 
         .editas {
             position: absolute;

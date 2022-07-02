@@ -8,13 +8,14 @@ function Crud() {
     <>
       <Nav />
 
-      <div className="create">
-        <Create />
+      <div className="movies">
+        <div className="create">
+          <Create />
+        </div>
+        <div className="list">
+          <List />
+        </div>
       </div>
-      <div className="list">
-        <List />
-      </div>
-
       <Edit />
     </>
   );
