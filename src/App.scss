@@ -6,6 +6,10 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
 
+    button {
+        cursor: pointer;
+    }
+
     .back {
         margin-top: 90px;
         position: relative;
@@ -127,11 +131,9 @@ body {
         // STARWARS STYLE END
 
         .categories {
-            // background-color: red;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
+            padding-bottom: 100px;
+            display: flex;
+            justify-content: space-between;
 
             h2 {
                 text-align: center;
@@ -146,6 +148,8 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                // margin-right: 40px;
+                width: 30%;
                 // border: 1px solid $spalva1;
 
                 input {
@@ -181,6 +185,7 @@ body {
             .cat-list {
                 color: $spalva1;
                 font-size: 30px;
+                // margin-left: 60px;
 
                 ul {
                     list-style: none;
@@ -189,7 +194,48 @@ body {
                     li {
                         display: flex;
                         justify-content: space-between;
-                        margin-bottom: 20px;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        font-style: italic;
+                        text-decoration: underline;
+
+                        .delete,
+                        .edit {
+                            width: 45px;
+                            height: 45px;
+                            padding: 5px;
+                            border: none;
+                            margin: 20px;
+                            border-radius: 50%;
+                            background-color: transparent;
+                            transition: transform 0.3s ease-in-out;
+
+                            svg {
+                                width: 35px;
+                                height: 35px;
+                            }
+                        }
+
+                        .delete {
+                            box-shadow: 0 0 10px crimson;
+
+                            svg {
+                                fill: crimson;
+                            }
+                        }
+
+                        .edit {
+                            box-shadow: 0 0 10px $spalva1;
+
+                            svg {
+                                fill: $spalva1;
+                            }
+                        }
+
+                        .delete:hover,
+                        .edit:hover {
+                            transform: scale(1.2);
+                        }
                     }
                 }
 

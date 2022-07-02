@@ -16,11 +16,15 @@ function Line({ line }) {
     <li>
       <b>{line.title}</b>
       <div className="buttons">
-        <button type="button" onClick={handleEdit}>
-          Edit
+        <button className="edit" type="button" onClick={handleEdit}>
+          <svg>
+            <use href="#edit" />
+          </svg>
         </button>
-        <button type="button" onClick={handleDelete}>
-          Delete
+        <button className="delete" type="button" onClick={handleDelete}>
+          <svg>
+            <use href="#delete" />
+          </svg>
         </button>
       </div>
     </li>
