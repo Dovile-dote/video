@@ -12,6 +12,7 @@ function Line({ line }) {
     setModalCat(line);
   };
 
+  console.log(line);
   return (
     <li>
       <b>{line.title}</b>
@@ -21,11 +22,15 @@ function Line({ line }) {
             <use href="#edit" />
           </svg>
         </button>
-        <button className="delete" type="button" onClick={handleDelete}>
-          <svg>
-            <use href="#delete" />
-          </svg>
-        </button>
+        {line.movies_total ? (
+          line.movies_total
+        ) : (
+          <button className="delete" type="button" onClick={handleDelete}>
+            <svg>
+              <use href="#delete" />
+            </svg>
+          </button>
+        )}
       </div>
     </li>
   );
