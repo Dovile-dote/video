@@ -20,25 +20,27 @@ function Create() {
     <>
       <h2>Create new Movie</h2>
       <div>
-        <label>Title</label>
+        {/* <label>Title</label> */}
         <input
           type="text"
           onChange={(e) => setTitle(e.target.value)}
           value={title}
+          placeholder="Enter movie title here"
         />
       </div>
       <div>
-        <label>Price</label>
+        {/* <label>Price</label> */}
         <input
           type="text"
           onChange={(e) => setPrice(e.target.value)}
           value={price}
+          placeholder="Add price here"
         />
       </div>
       <div>
-        <label>Categories</label>
+        {/* <label>Categories</label> */}
         <select value={cat} onChange={(e) => setCat(e.target.value)}>
-          <option value="0">Please, select your Cat</option>
+          <option value="0">Select movie categorie</option>
           {cats
             ? cats.map((c) => (
                 <option key={c.id} value={c.id}>

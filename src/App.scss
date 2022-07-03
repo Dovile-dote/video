@@ -8,6 +8,11 @@ body {
 
     button {
         cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.2);
     }
 
     .back {
@@ -134,6 +139,8 @@ body {
             padding-bottom: 100px;
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
+
 
             h2 {
                 text-align: center;
@@ -161,6 +168,7 @@ body {
                     border-radius: 12px;
                     background-color: transparent;
                     color: $spalva1;
+                    margin: 30px;
                 }
 
                 ::placeholder {
@@ -195,9 +203,153 @@ body {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        margin-bottom: 10px;
+                        margin-bottom: 30px;
                         font-style: italic;
-                        text-decoration: underline;
+                        // text-decoration: underline;
+
+                        .buttons {
+                            display: flex;
+
+                            .movies-count {
+                                width: 60px;
+                                height: 60px;
+                                margin: 10px;
+                                font-size: 14px;
+                                text-align: center;
+
+                                span {
+                                    font-size: 20px;
+                                    color: crimson;
+                                    font-weight: bold;
+                                }
+                            }
+
+                            .delete,
+                            .edit {
+                                width: 45px;
+                                height: 45px;
+                                padding: 5px;
+                                border: none;
+                                margin: 20px;
+                                border-radius: 50%;
+                                background-color: transparent;
+
+                                svg {
+                                    width: 35px;
+                                    height: 35px;
+                                }
+                            }
+
+                            .delete {
+                                box-shadow: 0 0 10px crimson;
+
+                                svg {
+                                    fill: crimson;
+                                }
+                            }
+
+                            .edit {
+                                box-shadow: 0 0 10px $spalva1;
+
+                                svg {
+                                    fill: $spalva1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .movies {
+            // background-color: red;
+            margin-top: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color: $spalva1;
+
+            .create {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 60px;
+                width: 30%;
+                border: 1px solid $spalva1;
+                border-radius: 12px;
+                box-shadow: 0 0 20px $spalva1;
+
+                h2 {
+                    font-size: 30px;
+                    margin: 30px;
+                }
+
+                input {
+                    width: 200px;
+                    text-align: center;
+                    font-size: 18px;
+                    padding: 20px;
+                    border: 1px solid $spalva1;
+                    border-radius: 12px;
+                    background-color: transparent;
+                    color: $spalva1;
+                    margin-bottom: 20px;
+                }
+
+                ::placeholder {
+                    color: rgba(241, 241, 151, 0.3)
+                }
+
+                select {
+                    background-color: $spalva;
+                    color: $spalva1;
+                    font-size: 18px;
+                    padding: 10px;
+                    border: 1px solid $spalva1;
+                    border-radius: 12px;
+                }
+
+                button {
+                    margin: 30px;
+                    padding: 20px 60px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 20px;
+                    border: 1px solid $spalva;
+                    border-radius: 16px;
+                    background-color: $spalva1;
+                    color: $spalva;
+                    box-shadow: 0 0 20px $spalva1;
+                }
+            }
+
+            .list {
+                width: 50%;
+                margin-left: 80px;
+                margin-right: 40px;
+                // border: 2px solid red;
+
+                h2 {
+                    text-align: center;
+                    font-size: 40px;
+                    text-shadow: -4px 0 $spalva1, 0 4px $spalva1, 4px 0 $spalva1, 0 -4px $spalva1;
+                    color: $spalva;
+                    letter-spacing: 8px;
+                }
+
+                ul {
+                    padding-left: 0;
+                    list-style: none;
+
+                    li {
+                        font-size: 24px;
+                        min-width: 300px;
+                        display: flex;
+                        border-bottom: 2px solid $spalva;
+                        padding-top: 5px;
+                        justify-content: space-between;
 
                         .delete,
                         .edit {
@@ -208,7 +360,6 @@ body {
                             margin: 20px;
                             border-radius: 50%;
                             background-color: transparent;
-                            transition: transform 0.3s ease-in-out;
 
                             svg {
                                 width: 35px;
@@ -231,53 +382,10 @@ body {
                                 fill: $spalva1;
                             }
                         }
-
-                        .delete:hover,
-                        .edit:hover {
-                            transform: scale(1.2);
-                        }
                     }
                 }
-
             }
         }
-
-        .movies {
-            // background-color: red;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .create {
-                width: 30%;
-                // border: 2px solid green;
-                flex-direction: column;
-            }
-
-            .list {
-                width: 60%;
-                margin-left: 10px;
-
-
-                ul {
-                    padding-left: 0;
-                    list-style: none;
-
-                    li {
-                        min-width: 300px;
-                        display: flex;
-                        border-bottom: 2px solid $spalva;
-                        padding-top: 5px;
-                        justify-content: space-between;
-                    }
-                }
-
-            }
-        }
-
-
-
-
 
         .editas {
             position: absolute;

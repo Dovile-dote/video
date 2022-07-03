@@ -23,7 +23,9 @@ function Line({ line }) {
           </svg>
         </button>
         {line.movies_total ? (
-          line.movies_total
+          <div className="movies-count">
+            You have: <span>{line.movies_total}</span> movies in this categorie.
+          </div>
         ) : (
           <button className="delete" type="button" onClick={handleDelete}>
             <svg>

@@ -14,15 +14,22 @@ function Line({ line }) {
 
   return (
     <li>
-      <p>
-        <b>{line.title}</b> {line.price} {line.category}
-      </p>
+      <div>
+        <h3>{line.title}</h3>
+        <p>
+          Price: {line.price}eu <i>{line.category}</i>
+        </p>
+      </div>
       <div className="buttons">
-        <button type="button" onClick={handleEdit}>
-          Edit
+        <button className="edit" type="button" onClick={handleEdit}>
+          <svg>
+            <use href="#edit" />
+          </svg>
         </button>
-        <button type="button" onClick={handleDelete}>
-          Delete
+        <button className="delete" type="button" onClick={handleDelete}>
+          <svg>
+            <use href="#delete" />
+          </svg>
         </button>
       </div>
     </li>
