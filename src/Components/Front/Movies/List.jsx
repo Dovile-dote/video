@@ -7,8 +7,8 @@ function List() {
 
   return (
     <>
-      <h2>List of Movies</h2>
-      <ul>
+      <h2>Choose a movie</h2>
+      <ul className="list">
         {movies
           ? movies.map((movie) => <Line key={movie.id} line={movie}></Line>)
           : null}
