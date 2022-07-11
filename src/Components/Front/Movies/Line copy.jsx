@@ -18,7 +18,6 @@ function Line({ line }) {
   };
 
   // console.log('rates yra: ' + rate);
-
   return (
     <li>
       <div>
@@ -33,25 +32,25 @@ function Line({ line }) {
           ? 'Rate: ' + (line.rate_sum / line.rates).toFixed(2)
           : 'no rates yet'}
         {/* <label>Rate it!</label> */}
-        {/* <select value={rate} onChange={rateIt}>
+        <select value={rate} onChange={rateIt}>
           {[...Array(10)].map((_, i) => (
             <option key={i} value={10 - i}>
               {10 - i}
             </option>
           ))}
-        </select> */}
-        <div className="radio-buttons">
+        </select>
+        {/* <div className="radio-buttons">
           {[...Array(5)].map((_, i) => (
             <div className="radio" key={i}>
               <input
                 type="radio"
-                name={'r' + line.id}
-                id={'r' + i + line.id}
+                name="r"
+                id={i}
                 value={1 + i}
                 onChange={rateIt}
-                checked={rate === 1 + i}
+                checked={rate}
               ></input>
-              <label htmlFor={'r' + i + line.id}>
+              <label htmlFor={i}>
                 <span>{1 + i}</span>
                 <svg>
                   <use href="#star" />
@@ -59,7 +58,7 @@ function Line({ line }) {
               </label>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </li>
   );

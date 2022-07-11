@@ -436,6 +436,7 @@ body {
         align-items: center;
         min-height: 100vh;
         background-color: $spalva;
+        position: relative;
 
         h1 {
             text-transform: uppercase;
@@ -449,6 +450,21 @@ body {
         h2 {
             font-size: 40px;
             text-shadow: 0 0 12px $spalva1;
+        }
+
+        .sort {
+            font-size: 30px;
+            color: $spalva1;
+            display: flex;
+            margin: 30px;
+
+            div {
+                margin: 20px;
+
+                label {
+                    margin-right: 20px;
+                }
+            }
         }
 
         .list {
@@ -534,5 +550,18 @@ body {
                 }
             }
         }
+
+        .message {
+            position: fixed;
+            background-color: rgba(153, 205, 50, 0.522);
+            font-size: 60px;
+            color: $spalva1;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+            top: 60px;
+            right: 30px;
+            border-radius: 18px;
+        }
     }
+
+
 }
